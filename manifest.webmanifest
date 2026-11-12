@@ -1,0 +1,15 @@
+{
+  "name": "אתר הנבוכים",
+  "short_name": "הנבוכים",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#E85D4A",
+  "background_color": "#FAF8F5",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

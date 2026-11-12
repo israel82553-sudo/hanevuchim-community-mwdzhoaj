@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="18" fill="#E85D4A"/>
+  <circle cx="32" cy="32" r="21" fill="#FFF8F4"/>
+  <!-- Rosy blushing cheeks -->
+  <ellipse cx="19" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.85"/>
+  <ellipse cx="45" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.85"/>
+  <!-- Slightly dizzy/embarrassed eyes -->
+  <circle cx="24" cy="27" r="3" fill="#23293A"/>
+  <circle cx="40" cy="27" r="3" fill="#23293A"/>
+  <path d="M19 21 Q24 19 27 22" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <path d="M37 22 Q40 19 45 21" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  <!-- Wavy embarrassed mouth -->
+  <path d="M24 40 Q28 37 32 40 Q36 43 40 40" stroke="#23293A" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  <!-- Sweat drop -->
+  <path d="M49 17 C51.5 21 52 24 49 25.5 C46 24 46.5 21 49 17 Z" fill="#5BC0EB"/>
+</svg>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#E85D4A">
+  <title>אתר הנבוכים — המקום לכל רגע מביך</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" id="brandResetLink" aria-label="אתר הנבוכים - דף הבית">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="44" height="44">
+            <rect width="64" height="64" rx="18" fill="#E85D4A"/>
+            <circle cx="32" cy="32" r="21" fill="#FFF8F4"/>
+            <ellipse cx="19" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.9"/>
+            <ellipse cx="45" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.9"/>
+            <circle cx="24" cy="27" r="3" fill="#23293A"/>
+            <circle cx="40" cy="27" r="3" fill="#23293A"/>
+            <path d="M19 21 Q24 19 27 22" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path d="M37 22 Q40 19 45 21" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path d="M24 40 Q28 37 32 40 Q36 43 40 40" stroke="#23293A" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+            <path d="M49 17 C51.5 21 52 24 49 25.5 C46 24 46.5 21 49 17 Z" fill="#5BC0EB"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">אתר הנבוכים</span>
+          <span class="brand-tagline">משתפים פדיחות, צוחקים ביחד</span>
+        </span>
+      </a>
+
+      <div class="header-search">
+        <label for="searchInput" class="sr-only">חיפוש פוסטים או משתמשים</label>
+        <input type="search" id="searchInput" class="search-input" placeholder="חיפוש פדיחות, נושאים או משתמשים...">
+      </div>
+
+      <nav class="header-actions" id="headerActions" aria-label="פעולות משתמש">
+        <!-- Populated dynamically by JS -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-layout">
+    <section class="feed-column" aria-label="פיד פוסטים">
+      <!-- Composer Card -->
+      <section class="card composer-card" id="composerSection" aria-label="כתיבת פוסט חדש">
+        <!-- Populated dynamically based on auth state -->
+      </section>
+
+      <!-- Filter & Sort Bar -->
+      <section class="filter-bar" aria-label="סינון ומיון פוסטים">
+        <div class="category-chips" id="categoryChips" role="tablist" aria-label="קטגוריות">
+          <button type="button" class="chip active" data-category="הכל">הכל</button>
+          <button type="button" class="chip" data-category="פדיחה בעבודה">פדיחה בעבודה</button>
+          <button type="button" class="chip" data-category="בציבור">בציבור</button>
+          <button type="button" class="chip" data-category="משפחה וחברים">משפחה וחברים</button>
+          <button type="button" class="chip"chip" data-category="טכנולוגיה">טכנולוגיה</button>
+          <button type="button" class="chip" data-category="כללי">כללי</button>
+        </div>
+
+        <div class="sort-control">
+          <label for="sortSelect" class="sr-only">מיון פוסטים</label>
+          <select id="sortSelect" class="select-input">
+            <option value="newest">הכי חדשים</option>
+            <option value="likes">הכי מביכים (לייקים)</option>
+            <option value="comments">הכי מדוברים (תגובות)</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Posts Feed -->
+      <div class="posts-feed" id="postsFeed" aria-live="polite">
+        <!-- Populated dynamically -->
+      </div>
+    </section>
+
+    <aside class="sidebar-column" aria-label="מידע וניהול קהילה">
+      <div class="card sidebar-card">
+        <div class="sidebar-badge">אב-טיפוס אינטראקטיבי</div>
+        <h2 class="sidebar-heading">ברוכים הבאים לאתר הנבוכים</h2>
+        <p class="sidebar-desc">
+          כאן כל אחד יכול לפתוח משתמש, לשתף רגעים מביכים מהחיים, להגיב ולהזדהות.
+          למנהל האתר יש גישה לפאנל ניהול מלא להוספת משתמשים, מחיקת פוסטים והרחקת משתמשים.
+        </p>
+        <div class="stats-grid" id="sidebarStats">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="card sidebar-card" id="sidebarUserCard">
+        <!-- Populated dynamically -->
+      </div>
+
+      <div class="card sidebar-card">
+        <h3 class="sidebar-subheading">חברי הקהילה</h3>
+        <ul class="community-members-list" id="communityMembersList">
+          <!-- Populated dynamically -->
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Auth Modal (Login / Register / Quick Switch) -->
+  <div class="modal-backdrop" id="authModal" hidden role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="authModalTitle" class="modal-title">כניסה והצטרפות</h2>
+        <button type="button" class="icon-btn modal-close" data-close-modal="authModal" aria-label="סגור חלון">✕</button>
+      </div>
+
+      <div class="modal-tabs" role="tablist">
+        <button type="button" class="tab-btn active" id="tabLoginBtn" data-auth-tab="login">התחברות</button>
+        <button type="button" class="tab-btn" id="tabRegisterBtn" data-auth-tab="register">הוספת משתמש / הרשמה</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginUsername">שם משתמש</label>
+            <input type="text" id="loginUsername" class="text-input" required autocomplete="username" placeholder="לדוגמה: admin או daniel">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">סיסמה</label>
+            <input type="password" id="loginPassword" class="text-input" required autocomplete="current-password" placeholder="הזן סיסמה">
+          </div>
+          <p class="form-error" id="loginError" hidden></p>
+          <button type="submit" class="btn btn-primary btn-full">התחבר לאתר</button>
+
+          <div class="demo-box">
+            <p class="demo-box-title">כניסה מהירה לבדיקת האב-טיפוס:</p>
+            <div class="demo-buttons">
+              <button type="button" class="btn btn-outline btn-sm" id="quickAdminBtn">התחבר כמנהל (admin / 1234)</button>
+              <button type="button" class="btn btn-outline btn-sm" id="quickUserBtn">התחבר כמשתמש (דניאל)</button>
+            </div>
+          </div>
+        </form>
+
+        <form id="registerForm" class="auth-form" hidden>
+          <div class="form-group">
+            <label for="regDisplayName">שם תצוגה (איך יראו אותך בפוסטים)</label>
+            <input type="text" id="regDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: מאיה המסמיקה">
+          </div>
+          <div class="form-group">
+            <label for="regUsername">שם משתמש (באנגלית או ספרות)</label>
+            <input type="text" id="regUsername" class="text-input" required maxlength="24" placeholder="לדוגמה: maya99">
+          </div>
+          <div class="form-group">
+            <label for="regPassword">סיסמה</label>
+            <input type="password" id="regPassword" class="text-input" required minlength="3" placeholder="לפחות 3 תווים">
+          </div>
+          <p class="form-error" id="registerError" hidden></p>
+          <button type="submit" class="btn btn-primary btn-full">צור משתמש והתחבר</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Post Modal -->
+  <div class="modal-backdrop" id="editPostModal" hidden role="dialog" aria-modal="true" aria-labelledby="editPostModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 id="editPostModalTitle" class="modal-title">עריכת פוסט</h2>
+        <button type="button" class="icon-btn modal-close" data-close-modal="editPostModal" aria-label="סגור חלון">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="editPostForm" class="stack-form">
+          <input type="hidden" id="editPostId">
+          <div class="form-group">
+            <label for="editPostTitle">כותרת (אופציונלי)</label>
+            <input type="text" id="editPostTitle" class="text-input" maxlength="90" placeholder="כותרת קצרה לפדיחה...">
+          </div>
+          <div class="form-group">
+            <label for="editPostCategory">קטגוריה</label>
+            <select id="editPostCategory" class="select-input">
+              <option value="פדיחה בעבודה">פדיחה בעבודה</option>
+              <option value="בציבור">בציבור</option>
+              <option value="משפחה וחברים">משפחה וחברים</option>
+              <option value="דיי value="כללי">כללי</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="editPostBody">תוכן הפוסט</label>
+            <textarea id="editPostBody" class="textarea-input" rows="5" required maxlength="1500"></textarea>
+          </div>
+          <div class="modal-footer-actions">
+            <button type="button" class="btn btn-ghost" data-close-modal="editPostModal">ביטול</button>
+            <button type="submit" class="btn btn-primary">שמור שינויים</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Panel Modal -->
+  <div class="modal-backdrop" id="adminModal" hidden role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-header">
+        <h2 id="adminModalTitle" class="modal-title">פאנל ניהול — אתר הנבוכים</h2>
+        <button type="button" class="icon-btn modal-close" data-close-modal="adminModal" aria-label="סגור חלון">✕</button>
+      </div>
+      <div class="modal-body admin-body">
+        <div class="admin-summary" id="adminSummary">
+          <!-- Populated dynamically -->
+        </div>
+
+        <section class="admin-section">
+          <h3 class="admin-section-title">הוספת משתמש חדש על ידי מנהל</h3>
+          <form id="adminAddUserForm" class="admin-add-user-form">
+            <div class="form-group">
+              <label for="adminNewDisplayName">שם תצוגה</label>
+              <input type="text" id="adminNewDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: רועי הנבוך">
+            </div>
+            <div class="form-group">
+              <label for="adminNewUsername">שם משתמש</label>
+              <input type="text" id="adminNewUsername" class="text-input" required maxlength="24" placeholder="לדוגמה: roy123">
+            </div>
+            <div class="form-group">
+              <label for="adminNewPassword">סיסמה</label>
+              <input type="text" id="adminNewPassword" class="text-input" required minlength="3" value="1234">
+            </div>
+            <div class="form-group">
+              <label for="adminNewRole">תפקיד</label>
+              <select id="adminNewRole" class="select-input">
+                <option value="user">משתמש רגיל</option>
+                <option value="admin">מנהל</option>
+              </select>
+            </div>
+            <div class="form-group form-group-btn">
+              <button type="submit" class="btn btn-primary">הוסף משתמש</button>
+            </div>
+          </form>
+          <p class="form-error" id="adminAddUserError" hidden></p>
+        </section>
+
+        <section class="admin-section">
+          <div class="admin-section-header">
+            <h3 class="admin-section-title">ניהול משתמשים (הרחקה / חסימה / מחיקה)</h3>
+            <button type="button" class="btn btn-ghost btn-sm text-danger" id="resetDemoDataBtn">איפוס נתוני הדגמה</button>
+          </div>
+          <div class="admin-users-list" id="adminUsersList">
+            <!-- Populated dynamically -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="modal-backdrop" id="confirmModal" hidden role="dialog" aria-modal="true" aria-labelledby="confirmModalTitle">
+    <div class="modal-dialog modal-dialog-sm">
+      <div class="modal-header">
+        <h2 id="confirmModalTitle" class="modal-title">אישור פעולה</h2>
+        <button type="button" class="icon-btn modal-close" data-close-modal="confirmModal" aria-label="סגור חלון">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="confirmModalMessage" class="confirm-message"></p>
+        <label class="checkbox-row" id="confirmExtraOption" hidden>
+          <input type="checkbox" id="confirmExtraCheckbox" checked>
+          <span id="confirmExtraLabel"></span>
+        </label>
+        <div class="modal-footer-actions">
+          <button type="button" class="btn btn-ghost" data-close-modal="confirmModal">ביטול</button>
+          <button type="button" class="btn btn-danger" id="confirmActionBtn">אישור</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
