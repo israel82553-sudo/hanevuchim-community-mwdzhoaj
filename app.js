@@ -3,11 +3,11 @@
 
   const STORAGE_KEY = 'hanevuchim_state_v1';
   const AVATAR_COLORS = [
-    '#E85D4A', '#34405A', '#24825A', '#D97706',
-    '#6D4AFF', '#0F766E', '#BE185D', '#2563EB'
+    '#1E2A3A', '#9A6B2F', '#2C6B4F', '#5C4B51',
+    '#4A5568', '#7C4D3A', '#3B526B', '#6B5B3E'
   ];
 
-  // Initial prototype seed data
+  // Initial philosophical community seed data
   function createSeedState() {
     const now = Date.now();
     const min = 60 * 1000;
@@ -19,41 +19,41 @@
         {
           id: 'u_admin',
           username: 'admin',
-          displayName: 'מנהל הנבוכים',
+          displayName: 'מנהל הסלון',
           password: '1234',
           role: 'admin',
           status: 'active',
-          avatarColor: '#34405A',
+          avatarColor: '#1E2A3A',
           createdAt: now - 48 * hour
         },
         {
           id: 'u_daniel',
           username: 'daniel',
-          displayName: 'דניאל המבולבל',
+          displayName: 'דניאל המהרהר',
           password: '1234',
           role: 'user',
           status: 'active',
-          avatarColor: '#E85D4A',
+          avatarColor: '#9A6B2F',
           createdAt: now - 36 * hour
         },
         {
           id: 'u_noa',
           username: 'noa',
-          displayName: 'נועה בפדיחה',
+          displayName: 'נועה הספקנית',
           password: '1234',
           role: 'user',
           status: 'active',
-          avatarColor: '#6D4AFF',
+          avatarColor: '#3B526B',
           createdAt: now - 24 * hour
         },
         {
           id: 'u_yossi',
           username: 'yossi',
-          displayName: 'יוסי במעלית',
+          displayName: 'יוסי הסטואי',
           password: '1234',
           role: 'user',
           status: 'active',
-          avatarColor: '#0F766E',
+          avatarColor: '#2C6B4F',
           createdAt: now - 12 * hour
         }
       ],
@@ -61,16 +61,16 @@
         {
           id: 'p_1',
           authorId: 'u_daniel',
-          title: 'אמרתי למלצר "בתאבון גם לך"',
-          body: 'המלצר הניח לי את הצלחת ואמר "בתאבון". לא יודע מה קרה לי במוח, הסתכלתי לו בעיניים ואמרתי בביטחון מלא: "תודה, בתאבון גם לך!". הוא קפא, אני קפאתי, ובסוף פשוט ברחתי לשירותים ל-5 דקות.',
-          category: 'בציבור',
+          title: 'האם הספק הוא סימן לחולשה או לחופש מחשבה?',
+          body: 'בעולם שמעודד תשובות נחרצות ומהירות, דווקא השהייה והמבוכה מול שאלה מורכבת נראות לי כביטוי העמוק ביותר לאנושיות. מי שלא נבוך לעולם — אולי פשוט הפסיק להקשיב למציאות המשתנה.',
+          category: 'פילוסופיה ומחשבה',
           imageData: null,
           likes: ['u_noa', 'u_yossi', 'u_admin'],
           comments: [
             {
               id: 'c_1',
               authorId: 'u_noa',
-              text: 'קלאסיקה! אני פעם אמרתי לשומר בקניון "תודה, שבת שלום" ביום שלישי.',
+              text: 'מסכימה לגמרי. סוקרטס הבין שהידיעה שאינך יודע היא תנאי מוקדם לכל חקירה אמיתית.',
               createdAt: now - 2 * hour
             }
           ],
@@ -80,16 +80,16 @@
         {
           id: 'p_2',
           authorId: 'u_noa',
-          title: 'המיקרופון בזום נשאר פתוח',
-          body: 'בישיבת הנהלה עם 30 איש, הייתי בטוחה שאני על מיוט ושרתי בקולי קולות שיר מהפסטיגל לכלב שלי. המנכ"ל עצר את המצגת ואמר: "נועה, ביצוע מרשים, אפשר להמשיך?"',
-          category: 'פדיחה בעבודה',
+          title: 'פרדוקס הספינה של תסאוס בעידן הבינה המלאכותית',
+          body: 'אם אנחנו מחליפים בהדרגה חלקים מהזיכרון, מהכתיבה ומההחלטות היומיומיות שלנו בכלים חיצוניים — באיזו נקודה המחשבה מפסיקה להיות "שלנו", או שמא התודעה תמיד הייתה שיתוף פעולה עם כלים?',
+          category: 'טכנולוגיה ותודעה',
           imageData: null,
           likes: ['u_daniel', 'u_yossi'],
           comments: [
             {
               id: 'c_2',
               authorId: 'u_yossi',
-              text: 'הסיוט הגדול ביותר של העבודה מהבית 😅',
+              text: 'כבר אפלטון חשש שהכתב יחליש את הזיכרון האנושי. האתגר הוא לשמור על כושר השיפוט העצמאי.',
               createdAt: now - 40 * min
             }
           ],
@@ -99,9 +99,9 @@
         {
           id: 'p_3',
           authorId: 'u_yossi',
-          title: 'נופפתי בהתלהבות לזר מוחלט',
-          body: 'ראיתי מישהי מנופפת לכיוון שלי מרחוק, אז חייכתי ונופפתי לה בחזרה בהתלהבות מוגזמת. ואז היא צעקה "מאחוריך!" וחיבקה את הבחור שעמד מטר ממני.',
-          category: 'בציבור',
+          title: 'על ההבחנה הסטואית בין מה שבשליטתנו למה שלא',
+          body: 'אפיקטטוס טען שמקור רוב הסבל האנושי הוא הניסיון לשלוט בתוצאות חיצוניות במקום בגישה הפנימית שלנו. האם לדעתכם השקפה כזו מחזקת את האחריות המוסרית או עלולה להוביל לאדישות חברתית?',
+          category: 'דילמות מוסריות',
           imageData: null,
           likes: ['u_daniel'],
           comments: [],
@@ -356,7 +356,7 @@
     if (!user) {
       headerActionsEl.innerHTML = `
         <button type="button" class="btn btn-outline btn-sm" id="openLoginBtn">התחברות</button>
-        <button type="button" class="btn btn-primary btn-sm" id="openRegisterBtn">הוסף משתמש / הרשמה</button>
+        <button type="button" class="btn btn-primary btn-sm" id="openRegisterBtn">הצטרפות לסלון</button>
       `;
       document.getElementById('openLoginBtn').addEventListener('click', () => {
         switchAuthTab('login');
@@ -395,11 +395,11 @@
       composerSectionEl.innerHTML = `
         <div class="composer-guest">
           <div class="composer-guest-text">
-            <h2>יש לך רגע מביך לספר? 😅</h2>
-            <p>התחבר או צור משתמש חדש תוך שניות כדי לפרסם פוסט ולהגיב לאחרים.</p>
+            <h2>יש לך תהייה פילוסופית או שאלה שמעסיקה את המחשבה?</h2>
+            <p>הצטרפו לסלון הנבוכים כדי לנסח רעיון, להעלות דילמה ולהתדיין עם הוגים אחרים.</p>
           </div>
           <div class="demo-buttons">
-            <button type="button" class="btn btn-primary" id="guestPublishCta">התחברות / הרשמה לכתיבה</button>
+            <button type="button" class="btn btn-primary" id="guestPublishCta">התחברות / הצטרפות לכתיבה</button>
           </div>
         </div>
       `;
@@ -416,30 +416,31 @@
           <span class="avatar" style="background:${escapeHtml(user.avatarColor)}">${escapeHtml(getInitial(user.displayName))}</span>
           <div>
             <strong>${escapeHtml(user.displayName)}</strong>
-            <div class="post-time">שתפו פדיחה, מבוכה או סיפור מצחיק</div>
+            <div class="post-time">נסחו מחשבה, שאלה מוסרית או התבוננות פילוסופית</div>
           </div>
         </div>
 
         <div class="composer-row">
-          <input type="text" id="postTitleInput" class="text-input" maxlength="90" placeholder="כותרת קצרה לפוסט (אופציונלי)">
-          <select id="postCategorySelect" class="select-input" aria-label="קטגוריה">
-            <option value="בציבור">בציבור</option>
-            <option value="פדיחה בעבודה">פדיחה בעבודה</option>
-            <option value="משפחה וחברים">משפחה וחברים</טכנולוגיה">טכנולוגיה</option>
+          <input type="text" id="postTitleInput" class="text-input" maxlength="90" placeholder="כותרת או תזה מרכזית (אופציונלי)">
+          <select id="postCategorySelect" class="select-input" aria-label="תחום דעת">
+            <option value="פילוסופיה ומחשבה">פילוסופיה ומחשבה</option>
+            <option value="דילמות מוסריות">דילמות מוסריות</option>
+            <option value="חברה ותרבות">חברה ותרבות</option>
+            <option value="טכנולוגיה ותודעה">טכנולוגיה ותודעה</option>
             <option value="כללי">כללי</option>
           </select>
         </div>
 
-        <textarea id="postBodyInput" class="textarea-input" rows="3" required maxlength="1500" placeholder="מה קרה? כתבו כאן את הסיפור שלכם..."></textarea>
+        <textarea id="postBodyInput" class="textarea-input" rows="3" required maxlength="1500" placeholder="מה מעסיק את מחשבתך? שתפו את הטיעון או ההרהור כאן..."></textarea>
 
         <div id="composerPreviewContainer"></div>
 
         <div class="composer-footer">
           <label class="image-upload-label">
-            <span>📷 צרף תמונה</span>
+            <span>📜 צרף איור או מקור חזותי</span>
             <input type="file" id="postImageInput" accept="image/*" hidden>
           </label>
-          <button type="submit" class="btn btn-primary">פרסם פוסט</button>
+          <button type="submit" class="btn btn-primary">פרסם הגות</button>
         </div>
       </form>
     `;
@@ -467,7 +468,7 @@
       const body = document.getElementById('postBodyInput').value.trim();
 
       if (!body) {
-        showToast('נא לכתוב תוכן לפוסט לפני הפרסום', 'error');
+        showToast('נא לכתוב תוכן לפני הפרסום', 'error');
         return;
       }
 
@@ -490,7 +491,7 @@
         uiState.category = 'הכל';
         updateCategoryChipUI();
         renderAll();
-        showToast('הפוסט פורסם בהצלחה!', 'success');
+        showToast('הרשימה פורסמה בסלון בהצלחה', 'success');
       } else {
         state.posts.shift();
       }
@@ -552,9 +553,9 @@
     if (posts.length === 0) {
       postsFeedEl.innerHTML = `
         <div class="card empty-state">
-          <div class="empty-state-icon">🫣</div>
-          <h3>לא נמצאו פוסטים תואמים</h3>
-          <p>אפשר לנקות את הסינון או להיות הראשונים שמשתפים רגע מביך בקטגוריה הזו.</p>
+          <div class="empty-state-icon">🏛️</div>
+          <h3>לא נמצאו הרהורים תואמים</h3>
+          <p>אפשר לנקות את הסינון או לפתוח בדיון חדש בתחום הזה.</p>
           ${(uiState.category !== 'הכל' || uiState.search) ? '<button type="button" class="btn btn-outline" id="clearFiltersBtn">נקה סינון וחיפוש</button>' : ''}
         </div>
       `;
@@ -573,7 +574,7 @@
 
     postsFeedEl.innerHTML = posts.map(post => {
       const author = getUserById(post.authorId);
-      const authorName = author ? author.displayName : 'משתמש שהוסר';
+      const authorName = author ? author.displayName : 'חבר שהוסר';
       const avatarColor = author ? author.avatarColor : '#8A93A5';
       const isAuthorBanned = author && author.status === 'banned';
       const isLiked = currentUser ? post.likes.includes(currentUser.id) : false;
@@ -618,18 +619,18 @@
           <div class="post-actions-bar">
             <div class="post-reactions">
               <button type="button" class="reaction-btn ${isLiked ? 'liked' : ''}" data-action="toggle-like" data-post-id="${escapeHtml(post.id)}">
-                <span>😅</span>
-                <span>מביך! (${post.likes.length})</span>
+                <span>✦</span>
+                <span>מעורר מחשבה (${post.likes.length})</span>
               </button>
               <button type="button" class="reaction-btn" data-action="toggle-comments" data-post-id="${escapeHtml(post.id)}">
                 <span>💬</span>
-                <span>תגובות (${post.comments.length})</span>
+                <span>דיון (${post.comments.length})</span>
               </button>
             </div>
 
             <div class="post-manage-actions">
               ${canEdit ? `<button type="button" class="btn btn-ghost btn-sm" data-action="edit-post" data-post-id="${escapeHtml(post.id)}">ערוך</button>` : ''}
-              ${canDelete ? `<button type="button" class="btn btn-danger-soft btn-sm" data-action="delete-post" data-post-id="${escapeHtml(post.id)}">מחק פוסט</button>` : ''}
+              ${canDelete ? `<button type="button" class="btn btn-danger-soft btn-sm" data-action="delete-post" data-post-id="${escapeHtml(post.id)}">מחק</button>` : ''}
               ${canKickAuthor ? `<button type="button" class="btn btn-danger-soft btn-sm" data-action="kick-user" data-user-id="${escapeHtml(author.id)}">העף משתמש</button>` : ''}
             </div>
           </div>
@@ -644,7 +645,7 @@
     const itemsHtml = post.comments.length
       ? post.comments.map(comment => {
           const cAuthor = getUserById(comment.authorId);
-          const cName = cAuthor ? cAuthor.displayName : 'משתמש שהוסר';
+          const cName = cAuthor ? cAuthor.displayName : 'חבר שהוסר';
           const cColor = cAuthor ? cAuthor.avatarColor : '#8A93A5';
           const canDeleteComment = currentUser && (currentUser.id === comment.authorId || currentUser.id === post.authorId || isAdmin);
           return `
@@ -664,16 +665,16 @@
             </div>
           `;
         }).join('')
-      : '<p class="empty-comments">עדיין אין תגובות — תהיו הראשונים להגיב!</p>';
+      : '<p class="empty-comments">טרם נכתבו תגובות — פתחו את הדיון!</p>';
 
     const formHtml = currentUser
       ? `
         <form class="comment-form" data-action="add-comment" data-post-id="${escapeHtml(post.id)}">
-          <input type="text" class="text-input" name="commentText" required maxlength="400" placeholder="כתבו תגובה...">
+          <input type="text" class="text-input" name="commentText" required maxlength="400" placeholder="הוסיפו התייחסות או נימוק...">
           <button type="submit" class="btn btn-secondary btn-sm">שלח</button>
         </form>
       `
-      : '<p class="empty-comments">התחברו כדי להוסיף תגובה.</p>';
+      : '<p class="empty-comments">התחברו כדי להשתתף בדיון.</p>';
 
     return `
       <div class="comments-section">
@@ -690,11 +691,11 @@
     sidebarStatsEl.innerHTML = `
       <div class="stat-box">
         <span class="stat-value">${state.posts.length}</span>
-        <span class="stat-label">פוסטים</span>
+        <span class="stat-label">רשימות</span>
       </div>
       <div class="stat-box">
         <span class="stat-value">${activeUsers.length}</span>
-        <span class="stat-label">משתמשים</span>
+        <span class="stat-label">הוגים</span>
       </div>
       <div class="stat-box">
         <span class="stat-value">${totalComments}</span>
@@ -705,11 +706,11 @@
     const currentUser = getCurrentUser();
     if (!currentUser) {
       sidebarUserCardEl.innerHTML = `
-        <h3 class="sidebar-subheading">התנסות מהירה</h3>
-        <p class="sidebar-desc">אורחים יכולים לצפות בפיד. רוצים לבדוק את יכולות הניהול או הכתיבה?</p>
+        <h3 class="sidebar-subheading">התנסות בסלון</h3>
+        <p class="sidebar-desc">קוראים אורחים יכולים לעיין בדיונים. רוצים לפרסם הגות או לנסות את כלי הניהול?</p>
         <div class="stack-form">
-          <button type="button" class="btn btn-secondary btn-sm btn-full" id="sidebarAdminLoginBtn">כניסה כמנהל (הוספה והעפת משתמשים)</button>
-          <button type="button" class="btn btn-outline btn-sm btn-full" id="sidebarRegisterBtn">צור משתמש חדש</button>
+          <button type="button" class="btn btn-secondary btn-sm btn-full" id="sidebarAdminLoginBtn">כניסה כמנהל (הוספה והרחקת חברים)</button>
+          <button type="button" class="btn btn-outline btn-sm btn-full" id="sidebarRegisterBtn">צור פרופיל חדש</button>
         </div>
       `;
       document.getElementById('sidebarAdminLoginBtn').addEventListener('click', () => {
@@ -721,17 +722,17 @@
       });
     } else {
       sidebarUserCardEl.innerHTML = `
-        <h3 class="sidebar-subheading">מחובר כעת</h3>
+        <h3 class="sidebar-subheading">מחובר לסלון</h3>
         <div class="community-member-info" style="margin-bottom:12px;">
           <span class="avatar" style="background:${escapeHtml(currentUser.avatarColor)}">${escapeHtml(getInitial(currentUser.displayName))}</span>
           <div>
             <div><strong>${escapeHtml(currentUser.displayName)}</strong></div>
-            <div class="post-time">@${escapeHtml(currentUser.username)} · ${currentUser.role === 'admin' ? 'מנהל האתר' : 'משתמש רשום'}</div>
+            <div class="post-time">@${escapeHtml(currentUser.username)} · ${currentUser.role === 'admin' ? 'מנהל הסלון' : 'חבר רשום'}</div>
           </div>
         </div>
         ${currentUser.role === 'admin'
-          ? '<button type="button" class="btn btn-secondary btn-sm btn-full" id="sidebarOpenAdminBtn">פתח פאנל ניהול משתמשים</button>'
-          : '<button type="button" class="btn btn-outline btn-sm btn-full" id="sidebarSwitchAccountBtn">החלף משתמש / הוסף משתמש</button>'
+          ? '<button type="button" class="btn btn-secondary btn-sm btn-full" id="sidebarOpenAdminBtn">פתח פאנל ניהול חברים</button>'
+          : '<button type="button" class="btn btn-outline btn-sm btn-full" id="sidebarSwitchAccountBtn">החלף משתמש / הוסף חבר</button>'
         }
       `;
       if (currentUser.role === 'admin') {
@@ -756,7 +757,7 @@
             <span class="community-member-name">${escapeHtml(u.displayName)}</span>
             ${u.role === 'admin' ? '<span class="role-badge role-badge-admin">מנהל</span>' : ''}
           </div>
-          <span class="post-time">${postCount} פוסטים</span>
+          <span class="post-time">${postCount} רשימות</span>
         </li>
       `;
     }).join('');
@@ -772,15 +773,15 @@
     adminSummaryEl.innerHTML = `
       <div class="stat-box">
         <span class="stat-value">${activeCount}</span>
-        <span class="stat-label">משתמשים פעילים</span>
+        <span class="stat-label">חברים פעילים</span>
       </div>
       <div class="stat-box">
         <span class="stat-value">${bannedCount}</span>
-        <span class="stat-label">משתמשים שהועפו</span>
+        <span class="stat-label">חברים שהורחקו</span>
       </div>
       <div class="stat-box">
         <span class="stat-value">${state.posts.length}</span>
-        <span class="stat-label">סה״כ פוסטים</span>
+        <span class="stat-label">סה״כ רשימות</span>
       </div>
     `;
 
@@ -791,7 +792,7 @@
 
       let actionButtons = '';
       if (isSelf) {
-        actionButtons = '<span class="post-time">זה המשתמש שלך</span>';
+        actionButtons = '<span class="post-time">זה הפרופיל שלך</span>';
       } else {
         const kickOrRestoreBtn = isBanned
           ? `<button type="button" class="btn btn-outline btn-sm" data-admin-action="restore" data-user-id="${escapeHtml(user.id)}">שחזר גישה</button>`
@@ -810,7 +811,7 @@
                 ${user.role === 'admin' ? '<span class="role-badge role-badge-admin">מנהל</span>' : ''}
                 ${isBanned ? '<span class="role-badge role-badge-banned">הורחק מהאתר</span>' : ''}
               </div>
-              <span class="admin-user-sub">@${escapeHtml(user.username)} · ${postCount} פוסטים</span>
+              <span class="admin-user-sub">@${escapeHtml(user.username)} · ${postCount} רשימות</span>
             </div>
           </div>
           <div class="admin-user-actions">
@@ -829,14 +830,14 @@
       return { ok: false, error: 'שם המשתמש או הסיסמה אינם נכונים.' };
     }
     if (user.status === 'banned') {
-      return { ok: false, error: 'משתמש זה הועף / נחסם מהאתר על ידי המנהל.' };
+      return { ok: false, error: 'משתמש זה הורחק / נחסם מהאתר על ידי המנהל.' };
     }
 
     state.currentUserId = user.id;
     saveState();
     closeModal(authModalEl);
     renderAll();
-    showToast(`ברוך הבא, ${user.displayName}!`, 'success');
+    showToast(`ברוך הבא לסלון, ${user.displayName}`, 'success');
     return { ok: true };
   }
 
@@ -845,7 +846,7 @@
     uiState.pendingImageData = null;
     saveState();
     renderAll();
-    showToast('התנתקת מהמערכת');
+    showToast('התנתקת מהסלון');
   }
 
   function createUser({ displayName, username, password, role = 'user', autoLogin = false }) {
@@ -903,7 +904,7 @@
 
     saveState();
     renderAll();
-    showToast(`המשתמש "${user.displayName}" הועף מהאתר${alsoDeletePosts ? ' והפוסטים שלו נמחקו' : ''}.`);
+    showToast(`המשתמש "${user.displayName}" הורחק מהאתר${alsoDeletePosts ? ' ורשימותיו נמחקו' : ''}.`);
   }
 
   function deleteUserPermanently(userId, alsoDeletePosts) {
@@ -978,7 +979,7 @@
       if (!currentUser) {
         switchAuthTab('login');
         openModal(authModalEl);
-        showToast('התחברו כדי לסמן "מביך!" על פוסטים');
+        showToast('התחברו כדי לסמן "מעורר מחשבה"');
         return;
       }
       const post = state.posts.find(p => p.id === postId);
@@ -1009,6 +1010,14 @@
       if (!post || !currentUser || currentUser.id !== post.authorId) return;
       editPostIdEl.value = post.id;
       editPostTitleEl.value = post.title || '';
+
+      const hasOption = Array.from(editPostCategoryEl.options).some(opt => opt.value === post.category);
+      if (!hasOption && post.category) {
+        const extraOpt = document.createElement('option');
+        extraOpt.value = post.category;
+        extraOpt.textContent = post.category;
+        editPostCategoryEl.appendChild(extraOpt);
+      }
       editPostCategoryEl.value = post.category;
       editPostBodyEl.value = post.body;
       openModal(editPostModalEl);
@@ -1021,14 +1030,14 @@
       if (currentUser.id !== post.authorId && currentUser.role !== 'admin') return;
 
       openConfirmDialog({
-        title: 'מחיקת פוסט',
-        message: 'האם למחוק את הפוסט הזה לצמיתות?',
-        confirmText: 'מחק פוסט',
+        title: 'מחיקת רשימה',
+        message: 'האם למחוק את הרשימה הזו לצמיתות?',
+        confirmText: 'מחק רשימה',
         onConfirm: () => {
           state.posts = state.posts.filter(p => p.id !== postId);
           saveState();
           renderAll();
-          showToast('הפוסט נמחק');
+          showToast('הרשימה נמחקה');
         }
       });
       return;
@@ -1051,10 +1060,10 @@
       if (!targetUser || targetUser.id === currentUser.id) return;
 
       openConfirmDialog({
-        title: `העפת המשתמש "${targetUser.displayName}"`,
-        message: 'המשתמש ייחסם ולא יוכל להתחבר או לפרסם יותר באתר.',
+        title: `הרחקת המשתמש "${targetUser.displayName}"`,
+        message: 'המשתמש ייחסם ולא יוכל להתחבר או לפרסם יותר בסלון.',
         confirmText: 'העף משתמש',
-        extraCheckboxLabel: 'מחק גם את כל הפוסטים והתגובות של המשתמש',
+        extraCheckboxLabel: 'מחק גם את כל הרשימות והתגובות של המשתמש',
         onConfirm: (alsoDeletePosts) => {
           kickUser(targetUser.id, alsoDeletePosts);
         }
@@ -1121,7 +1130,7 @@
     registerForm.reset();
     closeModal(authModalEl);
     renderAll();
-    showToast(`ברוך הבא לאתר הנבוכים, ${res.user.displayName}!`, 'success');
+    showToast(`ברוך הבא להנבוכים, ${res.user.displayName}`, 'success');
   });
 
   quickAdminBtn.addEventListener('click', () => {
@@ -1154,7 +1163,7 @@
     saveState();
     closeModal(editPostModalEl);
     renderAll();
-    showToast('הפוסט עודכן', 'success');
+    showToast('הרשימה עודכנה', 'success');
   });
 
   // Admin Panel Listeners
@@ -1195,10 +1204,10 @@
 
     if (action === 'kick') {
       openConfirmDialog({
-        title: `העפת המשתמש "${targetUser.displayName}"`,
+        title: `הרחקת המשתמש "${targetUser.displayName}"`,
         message: 'המשתמש ייחסם ולא יוכל להתחבר יותר לאתר.',
         confirmText: 'העף משתמש',
-        extraCheckboxLabel: 'מחק גם את כל הפוסטים והתגובות של המשתמש',
+        extraCheckboxLabel: 'מחק גם את כל הרשימות והתגובות של המשתמש',
         onConfirm: (alsoDeletePosts) => {
           kickUser(targetUser.id, alsoDeletePosts);
         }
@@ -1219,7 +1228,7 @@
         title: `מחיקת המשתמש "${targetUser.displayName}"`,
         message: 'המשתמש יוסר לחלוטין מרשימת המשתמשים.',
         confirmText: 'מחק לצמיתות',
-        extraCheckboxLabel: 'מחק גם את כל הפוסטים והתגובות שלו',
+        extraCheckboxLabel: 'מחק גם את כל הרשימות והתגובות שלו',
         onConfirm: (alsoDeletePosts) => {
           deleteUserPermanently(targetUser.id, alsoDeletePosts);
         }
@@ -1229,15 +1238,15 @@
 
   resetDemoDataBtn.addEventListener('click', () => {
     openConfirmDialog({
-      title: 'איפוס נתוני הדגמה',
-      message: 'פעולה זו תחזיר את כל הפוסטים והמשתמשים למצב ההתחלתי של האב-טיפוס.',
+      title: 'איפוס נתוני הסלון',
+      message: 'פעולה זו תחזיר את כל הרשימות והמשתמשים למצב ההתחלתי.',
       confirmText: 'אפס נתונים',
       onConfirm: () => {
         state = createSeedState();
         state.currentUserId = 'u_admin';
         saveState();
         renderAll();
-        showToast('נתוני ההדגמה אופסו בהצלחה', 'success');
+        showToast('נתוני הסלון אופסו בהצלחה', 'success');
       }
     });
   });
@@ -1281,4 +1290,3 @@
   // Initial Render
   renderAll();
 })();
-=====END=====

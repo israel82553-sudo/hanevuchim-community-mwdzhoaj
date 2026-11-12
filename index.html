@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#E85D4A">
-  <title>אתר הנבוכים — המקום לכל רגע מביך</title>
+  <meta name="theme-color" content="#1E2A3A">
+  <title>הנבוכים — האתר לאנשים שהיו חושבים</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
@@ -12,30 +12,30 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand" id="brandResetLink" aria-label="אתר הנבוכים - דף הבית">
+      <a href="#" class="brand" id="brandResetLink" aria-label="הנבוכים - האתר לאנשים שהיו חושבים">
         <span class="brand-logo" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="44" height="44">
-            <rect width="64" height="64" rx="18" fill="#E85D4A"/>
-            <circle cx="32" cy="32" r="21" fill="#FFF8F4"/>
-            <ellipse cx="19" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.9"/>
-            <ellipse cx="45" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.9"/>
-            <circle cx="24" cy="27" r="3" fill="#23293A"/>
-            <circle cx="40" cy="27" r="3" fill="#23293A"/>
-            <path d="M19 21 Q24 19 27 22" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-            <path d="M37 22 Q40 19 45 21" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-            <path d="M24 40 Q28 37 32 40 Q36 43 40 40" stroke="#23293A" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-            <path d="M49 17 C51.5 21 52 24 49 25.5 C46 24 46.5 21 49 17 Z" fill="#5BC0EB"/>
+          <svg viewBox="0 0 64 64" width="46" height="46">
+            <rect width="64" height="64" rx="16" fill="#1E2A3A"/>
+            <rect x="4" y="4" width="56" height="56" rx="13" fill="none" stroke="#C8964B" stroke-width="1.5" opacity="0.45"/>
+            <path d="M32 12 C36 18 39 22 39 26.5 C39 30.6 35.9 33.5 32 33.5 C28.1 33.5 25 30.6 25 26.5 C25 22 28 18 32 12 Z" fill="#D4A253"/>
+            <path d="M32 18.5 C34.2 21.8 35.2 24 35.2 26.5 C35.2 28.6 33.8 30.2 32 30.2 C30.2 30.2 28.8 28.6 28.8 26.5 C28.8 24 29.8 21.8 32 18.5 Z" fill="#FFF8EB"/>
+            <path d="M13 38 C19 35.5 26 36 32 39.5 C38 36 45 35.5 51 38 L51 50 C45 47.5 38 48 32 51.5 C26 48 19 47.5 13 50 Z" fill="#F7F3EB"/>
+            <line x1="32" y1="39.5" x2="32" y2="51.5" stroke="#1E2A3A" stroke-width="2" stroke-linecap="round"/>
+            <path d="M17.5 42.2 Q23 41 28 43.2" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+            <path d="M17.5 46 Q23 44.8 28 47" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+            <path d="M36 43.2 Q41 41 46.5 42.2" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+            <path d="M36 47 Q41 44.8 46.5 46" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
           </svg>
         </span>
         <span class="brand-text">
-          <span class="brand-title">אתר הנבוכים</span>
-          <span class="brand-tagline">משתפים פדיחות, צוחקים ביחד</span>
+          <span class="brand-title">הנבוכים</span>
+          <span class="brand-tagline">האתר לאנשים שהיו חושבים</span>
         </span>
       </a>
 
       <div class="header-search">
-        <label for="searchInput" class="sr-only">חיפוש פוסטים או משתמשים</label>
-        <input type="search" id="searchInput" class="search-input" placeholder="חיפוש פדיחות, נושאים או משתמשים...">
+        <label for="searchInput" class="sr-only">חיפוש רעיונות, תהיות או הוגים</label>
+        <input type="search" id="searchInput" class="search-input" placeholder="חיפוש תהיות, מושגים או כותבים...">
       </div>
 
       <nav class="header-actions" id="headerActions" aria-label="פעולות משתמש">
@@ -45,29 +45,29 @@
   </header>
 
   <main class="container main-layout">
-    <section class="feed-column" aria-label="פיד פוסטים">
+    <section class="feed-column" aria-label="זירת המחשבות והדיונים">
       <!-- Composer Card -->
-      <section class="card composer-card" id="composerSection" aria-label="כתיבת פוסט חדש">
+      <section class="card composer-card" id="composerSection" aria-label="כתיבת הרהור חדש">
         <!-- Populated dynamically based on auth state -->
       </section>
 
       <!-- Filter & Sort Bar -->
       <section class="filter-bar" aria-label="סינון ומיון פוסטים">
-        <div class="category-chips" id="categoryChips" role="tablist" aria-label="קטגוריות">
+        <div class="category-chips" id="categoryChips" role="tablist" aria-label="תחומי דעת">
           <button type="button" class="chip active" data-category="הכל">הכל</button>
-          <button type="button" class="chip" data-category="פדיחה בעבודה">פדיחה בעבודה</button>
-          <button type="button" class="chip" data-category="בציבור">בציבור</button>
-          <button type="button" class="chip" data-category="משפחה וחברים">משפחה וחברים</button>
-          <button type="button" class="chip"chip" data-category="טכנולוגיה">טכנולוגיה</button>
+          <button type="button" class="chip" data-category="פילוסופיה ומחשבה">פילוסופיה ומחשבה</button>
+          <button type="button" class="chip" data-category="דילמות מוסריות">דילמות מוסריות</button>
+          <button type="button" class="chip" data-category="חברה ותרבות">חברה ותרבות</button>
+          <button type="button" class="chip" data-category="טכנולוגיה ותודעה">טכנולוגיה ותודעה</button>
           <button type="button" class="chip" data-category="כללי">כללי</button>
         </div>
 
         <div class="sort-control">
-          <label for="sortSelect" class="sr-only">מיון פוסטים</label>
+          <label for="sortSelect" class="sr-only">מיון דיונים</label>
           <select id="sortSelect" class="select-input">
             <option value="newest">הכי חדשים</option>
-            <option value="likes">הכי מביכים (לייקים)</option>
-            <option value="comments">הכי מדוברים (תגובות)</option>
+            <option value="likes">מעוררי מחשבה</option>
+            <option value="comments">הדיונים הפעילים</option>
           </select>
         </div>
       </section>
@@ -78,13 +78,15 @@
       </div>
     </section>
 
-    <aside class="sidebar-column" aria-label="מידע וניהול קהילה">
-      <div class="card sidebar-card">
-        <div class="sidebar-badge">אב-טיפוס אינטראקטיבי</div>
-        <h2 class="sidebar-heading">ברוכים הבאים לאתר הנבוכים</h2>
+    <aside class="sidebar-column" aria-label="מידע וניהול הקהילה">
+      <div class="card sidebar-card sidebar-manifesto">
+        <div class="sidebar-badge">סלון פילוסופי דיגיטלי</div>
+        <h2 class="sidebar-heading">הנבוכים</h2>
+        <blockquote class="sidebar-quote">
+          ״הספק הוא ראשיתה של החוכמה, והמבוכה היא שערה של המחשבה העצמאית.״
+        </blockquote>
         <p class="sidebar-desc">
-          כאן כל אחד יכול לפתוח משתמש, לשתף רגעים מביכים מהחיים, להגיב ולהזדהות.
-          למנהל האתר יש גישה לפאנל ניהול מלא להוספת משתמשים, מחיקת פוסטים והרחקת משתמשים.
+          מרחב לדיאלוג עמוק, בירור רעיונות, פרדוקסים ושאלות קיומיות. כל חבר יכול להוסיף מחשבה, להגיב ולהשתתף בשיח — ולמנהל הסלון גישה מלאה לניהול הקהילה.
         </p>
         <div class="stats-grid" id="sidebarStats">
           <!-- Populated dynamically -->
@@ -96,7 +98,7 @@
       </div>
 
       <div class="card sidebar-card">
-        <h3 class="sidebar-subheading">חברי הקהילה</h3>
+        <h3 class="sidebar-subheading">חברי הסלון</h3>
         <ul class="community-members-list" id="communityMembersList">
           <!-- Populated dynamically -->
         </ul>
@@ -108,13 +110,13 @@
   <div class="modal-backdrop" id="authModal" hidden role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h2 id="authModalTitle" class="modal-title">כניסה והצטרפות</h2>
+        <h2 id="authModalTitle" class="modal-title">כניסה לסלון הנבוכים</h2>
         <button type="button" class="icon-btn modal-close" data-close-modal="authModal" aria-label="סגור חלון">✕</button>
       </div>
 
       <div class="modal-tabs" role="tablist">
         <button type="button" class="tab-btn active" id="tabLoginBtn" data-auth-tab="login">התחברות</button>
-        <button type="button" class="tab-btn" id="tabRegisterBtn" data-auth-tab="register">הוספת משתמש / הרשמה</button>
+        <button type="button" class="tab-btn" id="tabRegisterBtn" data-auth-tab="register">הוספת חבר / הרשמה</button>
       </div>
 
       <div class="modal-body">
@@ -128,21 +130,21 @@
             <input type="password" id="loginPassword" class="text-input" required autocomplete="current-password" placeholder="הזן סיסמה">
           </div>
           <p class="form-error" id="loginError" hidden></p>
-          <button type="submit" class="btn btn-primary btn-full">התחבר לאתר</button>
+          <button type="submit" class="btn btn-primary btn-full">היכנס לסלון</button>
 
           <div class="demo-box">
-            <p class="demo-box-title">כניסה מהירה לבדיקת האב-טיפוס:</p>
+            <p class="demo-box-title">גישה מהירה להתנסות:</p>
             <div class="demo-buttons">
-              <button type="button" class="btn btn-outline btn-sm" id="quickAdminBtn">התחבר כמנהל (admin / 1234)</button>
-              <button type="button" class="btn btn-outline btn-sm" id="quickUserBtn">התחבר כמשתמש (דניאל)</button>
+              <button type="button" class="btn btn-outline btn-sm" id="quickAdminBtn">כניסה כמנהל (admin / 1234)</button>
+              <button type="button" class="btn btn-outline btn-sm" id="quickUserBtn">כניסה כחבר (דניאל)</button>
             </div>
           </div>
         </form>
 
         <form id="registerForm" class="auth-form" hidden>
           <div class="form-group">
-            <label for="regDisplayName">שם תצוגה (איך יראו אותך בפוסטים)</label>
-            <input type="text" id="regDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: מאיה המסמיקה">
+            <label for="regDisplayName">שם תצוגה (כינוי הגותי או שם מלא)</label>
+            <input type="text" id="regDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: מאיה הספקנית">
           </div>
           <div class="form-group">
             <label for="regUsername">שם משתמש (באנגלית או ספרות)</label>
@@ -153,7 +155,7 @@
             <input type="password" id="regPassword" class="text-input" required minlength="3" placeholder="לפחות 3 תווים">
           </div>
           <p class="form-error" id="registerError" hidden></p>
-          <button type="submit" class="btn btn-primary btn-full">צור משתמש והתחבר</button>
+          <button type="submit" class="btn btn-primary btn-full">צור פרופיל והצטרף</button>
         </form>
       </div>
     </div>
@@ -163,27 +165,28 @@
   <div class="modal-backdrop" id="editPostModal" hidden role="dialog" aria-modal="true" aria-labelledby="editPostModalTitle">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h2 id="editPostModalTitle" class="modal-title">עריכת פוסט</h2>
+        <h2 id="editPostModalTitle" class="modal-title">עריכת רשימה פילוסופית</h2>
         <button type="button" class="icon-btn modal-close" data-close-modal="editPostModal" aria-label="סגור חלון">✕</button>
       </div>
       <div class="modal-body">
         <form id="editPostForm" class="stack-form">
           <input type="hidden" id="editPostId">
           <div class="form-group">
-            <label for="editPostTitle">כותרת (אופציונלי)</label>
-            <input type="text" id="editPostTitle" class="text-input" maxlength="90" placeholder="כותרת קצרה לפדיחה...">
+            <label for="editPostTitle">כותרת / תזה (אופציונלי)</label>
+            <input type="text" id="editPostTitle" class="text-input" maxlength="90" placeholder="כותרת קצרה לתהייה...">
           </div>
           <div class="form-group">
-            <label for="editPostCategory">קטגוריה</label>
+            <label for="editPostCategory">תחום דעת</label>
             <select id="editPostCategory" class="select-input">
-              <option value="פדיחה בעבודה">פדיחה בעבודה</option>
-              <option value="בציבור">בציבור</option>
-              <option value="משפחה וחברים">משפחה וחברים</option>
-              <option value="דיי value="כללי">כללי</option>
+              <option value="פילוסופיה ומחשבה">פילוסופיה ומחשבה</option>
+              <option value="דילמות מוסריות">דילמות מוסריות</option>
+              <option value="חברה ותרבות">חברה ותרבות</option>
+              <option value="טכנולוגיה ותודעה">טכנולוגיה ותודעה</option>
+              <option value="כללי">כללי</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="editPostBody">תוכן הפוסט</label>
+            <label for="editPostBody">גוף המחשבה</label>
             <textarea id="editPostBody" class="textarea-input" rows="5" required maxlength="1500"></textarea>
           </div>
           <div class="modal-footer-actions">
@@ -199,7 +202,7 @@
   <div class="modal-backdrop" id="adminModal" hidden role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
     <div class="modal-dialog modal-dialog-lg">
       <div class="modal-header">
-        <h2 id="adminModalTitle" class="modal-title">פאנל ניהול — אתר הנבוכים</h2>
+        <h2 id="adminModalTitle" class="modal-title">הנהלת הסלון — הנבוכים</h2>
         <button type="button" class="icon-btn modal-close" data-close-modal="adminModal" aria-label="סגור חלון">✕</button>
       </div>
       <div class="modal-body admin-body">
@@ -208,11 +211,11 @@
         </div>
 
         <section class="admin-section">
-          <h3 class="admin-section-title">הוספת משתמש חדש על ידי מנהל</h3>
+          <h3 class="admin-section-title">צירוף חבר חדש על ידי מנהל</h3>
           <form id="adminAddUserForm" class="admin-add-user-form">
             <div class="form-group">
               <label for="adminNewDisplayName">שם תצוגה</label>
-              <input type="text" id="adminNewDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: רועי הנבוך">
+              <input type="text" id="adminNewDisplayName" class="text-input" required maxlength="30" placeholder="לדוגמה: רועי המתבונן">
             </div>
             <div class="form-group">
               <label for="adminNewUsername">שם משתמש</label>
@@ -225,7 +228,7 @@
             <div class="form-group">
               <label for="adminNewRole">תפקיד</label>
               <select id="adminNewRole" class="select-input">
-                <option value="user">משתמש רגיל</option>
+                <option value="user">חבר קהילה</option>
                 <option value="admin">מנהל</option>
               </select>
             </div>
@@ -238,8 +241,8 @@
 
         <section class="admin-section">
           <div class="admin-section-header">
-            <h3 class="admin-section-title">ניהול משתמשים (הרחקה / חסימה / מחיקה)</h3>
-            <button type="button" class="btn btn-ghost btn-sm text-danger" id="resetDemoDataBtn">איפוס נתוני הדגמה</button>
+            <h3 class="admin-section-title">ניהול חברים (הרחקה / חסימה / מחיקה)</h3>
+            <button type="button" class="btn btn-ghost btn-sm text-danger" id="resetDemoDataBtn">איפוס נתוני הסלון</button>
           </div>
           <div class="admin-users-list" id="adminUsersList">
             <!-- Populated dynamically -->

@@ -1,10 +1,10 @@
 {
-  "name": "אתר הנבוכים",
+  "name": "הנבוכים — האתר לאנשים שהיו חושבים",
   "short_name": "הנבוכים",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#E85D4A",
-  "background_color": "#FAF8F5",
+  "theme_color": "#1E2A3A",
+  "background_color": "#F7F3EB",
   "icons": [
     {
       "src": "favicon.svg",

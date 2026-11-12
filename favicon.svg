@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="18" fill="#E85D4A"/>
-  <circle cx="32" cy="32" r="21" fill="#FFF8F4"/>
-  <!-- Rosy blushing cheeks -->
-  <ellipse cx="19" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.85"/>
-  <ellipse cx="45" cy="36" rx="5.5" ry="3.2" fill="#FF9E91" opacity="0.85"/>
-  <!-- Slightly dizzy/embarrassed eyes -->
-  <circle cx="24" cy="27" r="3" fill="#23293A"/>
-  <circle cx="40" cy="27" r="3" fill="#23293A"/>
-  <path d="M19 21 Q24 19 27 22" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-  <path d="M37 22 Q40 19 45 21" stroke="#23293A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-  <!-- Wavy embarrassed mouth -->
-  <path d="M24 40 Q28 37 32 40 Q36 43 40 40" stroke="#23293A" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-  <!-- Sweat drop -->
-  <path d="M49 17 C51.5 21 52 24 49 25.5 C46 24 46.5 21 49 17 Z" fill="#5BC0EB"/>
+  <rect width="64" height="64" rx="16" fill="#1E2A3A"/>
+  <rect x="4" y="4" width="56" height="56" rx="13" fill="none" stroke="#C8964B" stroke-width="1.5" opacity="0.45"/>
+  <!-- Classical flame of inquiry -->
+  <path d="M32 12 C36 18 39 22 39 26.5 C39 30.6 35.9 33.5 32 33.5 C28.1 33.5 25 30.6 25 26.5 C25 22 28 18 32 12 Z" fill="#D4A253"/>
+  <path d="M32 18.5 C34.2 21.8 35.2 24 35.2 26.5 C35.2 28.6 33.8 30.2 32 30.2 C30.2 30.2 28.8 28.6 28.8 26.5 C28.8 24 29.8 21.8 32 18.5 Z" fill="#FFF8EB"/>
+  <!-- Open philosophical book -->
+  <path d="M13 38 C19 35.5 26 36 32 39.5 C38 36 45 35.5 51 38 L51 50 C45 47.5 38 48 32 51.5 C26 48 19 47.5 13 50 Z" fill="#F7F3EB"/>
+  <line x1="32" y1="39.5" x2="32" y2="51.5" stroke="#1E2A3A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M17.5 42.2 Q23 41 28 43.2" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+  <path d="M17.5 46 Q23 44.8 28 47" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+  <path d="M36 43.2 Q41 41 46.5 42.2" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+  <path d="M36 47 Q41 44.8 46.5 46" stroke="#9A6B2F" stroke-width="1.7" stroke-linecap="round" fill="none"/>
 </svg>
